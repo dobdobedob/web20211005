@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../icon/css/all.css">
+    <title>z-index</title>
+    <style>
+        img {
+            position: absolute;
+            z-index: -1;
+             /* 값이 작을 수록 눈에서 멀어짐 */
+        }
+        span {
+            /* position: relative;
+            z-index: 999; */
+            color: white;
+            font-size: 24px;
+            background-color: black;
+        }
+        .test {
+            
+            text-align: center;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- div>img+span -->
+    <div>
+        <img src="game.png" alt="">
+        <span>오징어 게임 포스트</span>
+    </div>
+    <h1 class="test">김토끼 test용</h1>
+</body>
+</html>

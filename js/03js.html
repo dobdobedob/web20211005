@@ -21,7 +21,7 @@
         }
 
         .drop-down-menu {
-            display: none;
+            /* display: none; */
             position: absolute;
             background-color: white;
             color: black;
@@ -32,9 +32,12 @@
             width: 80px;
 
         }
-        .main-menu-item:hover .drop-down-menu {
-            display: block;
+        .d-none {
+            display: none;
         }
+        /* .main-menu-item:hover .drop-down-menu {
+            display: block;
+        } */
     </style>
 </head>
 <body>
@@ -42,10 +45,10 @@
 <div class="main-menu">
     <div class="main-menu-item">Home</div>
     <div class="main-menu-item">News</div>
-    <div class="main-menu-item">
+    <div id="menu1" class="main-menu-item">
         Dropdown <i class="fas fa-caret-down"></i>
         <!-- .drop-down-menu>.drop-down-menu-item*3{Link $} -->
-        <div class="drop-down-menu">
+        <div class="drop-down-menu d-none">
             <div class="drop-down-menu-item">Link 1</div>
             <div class="drop-down-menu-item">Link 2</div>
             <div class="drop-down-menu-item">Link 3</div>
@@ -55,5 +58,11 @@
 
 <!-- h1>lorem3 -->
 <h1>Lorem, ipsum dolor.</h1>
+
+<script>
+    document.querySelector("#menu1").onclick = function() {
+        document.querySelector("#menu1 .drop-down-menu").classList.toggle("d-none");
+    }
+</script>
 </body>
 </html>
