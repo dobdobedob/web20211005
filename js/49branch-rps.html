@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../icon/css/all.css">
+    <title></title>
+    <style>
+        i {
+            font-size: 100px;
+        }
+        button {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+<!-- button{가위 바위 보} -->
+<!-- <button onclick="rps();">가위 바위 보</button> -->
+
+<!-- button[onclick]*3 -->
+<button onclick="rps(0);" class="far fa-hand-scissors"></button>
+<button onclick="rps(1);" class="far fa-hand-rock"></button>
+<button onclick="rps(2);" class="far fa-hand-paper"></button>
+
+<!-- div>span>i.fas -->
+<div>
+    <span>
+        <i class="fas"></i>
+    </span>
+</div>
+
+<div><h1>경기 결과</h1></div>
+<div class="result">
+    <div>이김
+        <span id="win">0</span>
+    </div>
+    <div>짐
+        <span id="lose">0</span>
+    </div>
+    <div>비김
+        <span id="tie">0</span>
+    </div>
+</div>
+
+<script>
+    function increase(selector) {
+    let elem = document.querySelector(selector);
+    let n = Number(elem.innerHTML);
+    elem.innerHTML = n + 1;
+    }
+
+    function rps(user) {
+        
+    let r = Math.random();
+    // console.log(r);
+    
+    r = parseInt(r * 3);
+    console.log(user);
+    console.log(r);
+    
+    let icon = document.querySelector("i");
+    icon.classList.remove("fa-hand-rock", "fa-hand-paper", "fa-hand-scissors");
+    
+    if (r == 0) {
+        console.log("가위");
+        icon.classList.add("fa-hand-scissors");
+    } else if(r == 1) {
+        console.log("바위");
+        icon.classList.add("fa-hand-rock");
+    } else if(r == 2) {
+        console.log("보");
+        icon.classList.add("fa-hand-paper");
+    }
+    
+    let result;
+    if (user == r) {
+        result = "비겼습니다.";
+        increase("#tie");
+    } else if ((user + 2) % 3 == r) {
+        result = "이겼습니다.";
+        increase("#win");
+    // } else if (user == 0 && r == 2) {
+    //     result = "이겼습니다.";
+    //     increase("#win");
+    // } else if (user == 1 && r == 0) {
+    //     result = "이겼습니다.";
+    //     increase("#win");
+    // } else if (user == 2 && r == 1 ) {
+    //     result = "이겼습니다.";
+    //     increase("#win");
+    } else {
+        result = "졌습니다.";
+        increase("#lose");
+    }
+    
+// 나으 망한 코드들 개고생 굿잡
+    // let c = 0;
+    // let h = 0;
+
+    // if (user == 1) {
+        //     if (r == 2) {
+            //         c++;
+            //     } else if(r == 0) {
+                //         h++;
+                //     }
+                // } else if(user == 2) {
+                    //     if (r == 0) {
+    //         c++;
+    //     } else if (r == 1) {
+    //         h++;
+    //     }
+    // } else if (user == 0) {
+    //     if (r == 1) {
+    //         c++;
+    //     } else if (r == 2) {
+    //         h++;
+    //     }
+    // }
+
+    // console.log(c);
+    // console.log(h);
+    // if (r == user) {
+    //     comcount++
+    // } else if () {
+        //     humancount++
+        // }
+    }
+    </script>
+</body>
+</html>
