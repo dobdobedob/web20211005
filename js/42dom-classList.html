@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../icon/css/all.css">
+    <title></title>
+    <style>
+        i {
+            font-size: 42px;
+        }
+    </style>
+</head>
+<body>
+    <span onclick="toggleHeart();"><i class="far fa-heart"></i></span>
+    <!-- far fas -->
+    <!-- <i class="fas fa-heart"></i>
+    <i class="far fa-heart"></i> -->
+<script>
+function toggleHeart() {
+    let h = document.querySelector("i");
+    h.classList.toggle("far");
+    h.classList.toggle("fas");
+    
+    // document.querySelector("i").classList.remove("far");
+    // document.querySelector("i").classList.add("fas");
+}
+</script>
+</body>
+</html>
