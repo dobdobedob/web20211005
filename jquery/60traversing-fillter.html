@@ -9,12 +9,118 @@
     </style>
     <script>
         $(document).ready(function() {
-            
+            $("#input1").keyup(function () {
+                let lists = $("#list1 li");
+
+                for (let i = 0; i < lists.length; i++) {
+                    let text = lists.eq(i).text();
+
+                    if (text.toLowerCase().includes($(this).val())) {
+                        lists.eq(i).show();
+                    } else {
+                        lists.eq(i).hide();
+                    }
+                }
+            });
         });
     </script>
 </head>
 <body>
-
+<!-- input#input1 -->
+<input type="text" id="input1">
+<!-- ul#list1>li*30>lorem5 -->
+<ul id="list1">
+    <li>
+        Lorem ipsum dolor sit amet.
+    </li>
+    <li>
+        Quasi quidem voluptatum assumenda rem!
+    </li>
+    <li>
+        Deserunt excepturi vero tempora culpa.
+    </li>
+    <li>
+        Molestias explicabo sequi ipsam autem?
+    </li>
+    <li>
+        Quos quas ab optio distinctio.
+    </li>
+    <li>
+        Sunt beatae mollitia impedit magnam.
+    </li>
+    <li>
+        Eveniet repellat veniam sequi architecto.
+    </li>
+    <li>
+        Reiciendis odit incidunt possimus officia?
+    </li>
+    <li>
+        Vel, sed? Modi, ipsam aliquid.
+    </li>
+    <li>
+        Accusamus provident quos voluptas quibusdam.
+    </li>
+    <li>
+        Illum enim impedit unde atque!
+    </li>
+    <li>
+        Delectus maiores dolorum maxime odio.
+    </li>
+    <li>
+        Non corrupti deleniti quisquam quam?
+    </li>
+    <li>
+        Eveniet ab qui ipsa cupiditate?
+    </li>
+    <li>
+        Consequuntur similique asperiores ipsa neque.
+    </li>
+    <li>
+        Dicta maxime illum et odio.
+    </li>
+    <li>
+        Non quidem distinctio accusamus rem!
+    </li>
+    <li>
+        Odio similique quo maiores suscipit.
+    </li>
+    <li>
+        Dicta, nesciunt quam. Obcaecati, consequuntur.
+    </li>
+    <li>
+        Laborum quod rerum dolores harum.
+    </li>
+    <li>
+        Consectetur illum nostrum blanditiis est?
+    </li>
+    <li>
+        Exercitationem aliquid quibusdam alias sint?
+    </li>
+    <li>
+        Neque, facere. Natus, blanditiis doloribus.
+    </li>
+    <li>
+        Illum iure dignissimos distinctio ut?
+    </li>
+    <li>
+        Earum, a! Sed, ipsam laboriosam!
+    </li>
+    <li>
+        Provident, quaerat distinctio! Magnam, itaque.
+    </li>
+    <li>
+        Asperiores omnis debitis animi nesciunt!
+    </li>
+    <li>
+        Impedit commodi eveniet alias incidunt!
+    </li>
+    <li>
+        Vitae aliquam doloribus dignissimos laboriosam?
+    </li>
+    <li>
+        Cumque impedit rerum sequi placeat.
+    </li>
+</ul>
 <script>
 
 </script>
