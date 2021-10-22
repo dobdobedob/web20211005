@@ -3,17 +3,23 @@
 <head>
     <link rel="stylesheet" href="../icon/css/all.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>toggle class</title>
+    <title></title>
     <style>
-        .dark {
-            background-color: black;
-            color: white;
-        }
+        
     </style>
     <script>
         $(document).ready(function() {
-            $("h1").click(function () {
-                $(this).toggleClass("dark");
+            $("h1:nth-child(1)").css("color", "blue");
+            $("h1:nth-child(2)").css("backgroud-color", "yellow");
+            $("h1:nth-child(3)").css("font-size", "48px")
+                                .css("font-style", "italic")
+                                .css("border", "5px solid green");
+
+            $("h1:nth-child(4)").css({
+                color: "blue",
+                border: "5px dotted pnik",
+                fontSize: "72px",
+                fontStyle: "italic"
             });
         });
     </script>
@@ -24,16 +30,16 @@
     Lorem.
 </h1>
 <h1>
-    Autem?
+    Similique!
 </h1>
 <h1>
-    Nemo.
+    Sint.
 </h1>
 <h1>
-    Aperiam!
+    Illo!
 </h1>
 <h1>
-    Culpa.
+    Aperiam?
 </h1>
 <script>
 
