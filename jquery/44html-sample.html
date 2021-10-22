@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../icon/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>html sample</title>
+    <style>
+        .big {
+            display: none;
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+        }
+        .small {
+            width: 50px;
+            height: 25px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            // $(".small").mouseenter(function() {
+            //     let img = $(this).attr("src");
+            //     $(".big").attr("src", img);
+            //     $(".big").show();
+            // });
+            // $(".small").mouseleave(function () {
+            //     $(".big").hide();
+            // });
+
+            $(".small").hover(function() {
+                let img = $(this).attr("src");
+                $(".big").attr("src", img);
+                $(".big").show();
+            }, function () {
+                $(".big").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+<!-- img*2.small+br+img.big -->
+<img src="보노보노.jpg" alt="" class="small">
+<img src="나문희.jpg" alt="" class="small">
+<br>
+<img src="" alt="" class="big">
+<script>
+
+</script>
+</body>
+</html>

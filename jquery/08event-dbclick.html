@@ -9,18 +9,25 @@
     </style>
     <script>
         $(document).ready(function() {
-            $("input").keyup(function() {
-                let address = $(this).val();
-                $("a").attr("href", address);
+            $("#head1").dbclick(function () {
+                console.log("1번 제목 클릭됨");
             });
+            
         });
     </script>
 </head>
 <body>
-<!-- input+br+a -->
-<input type="text">
-<br>
-<a href="">link</a>
+    <!-- h1#head$*3>lorem1 -->
+    <h1 id="head1">
+        Lorem.
+    </h1>
+    <h1 id="head2">
+        Explicabo.
+    </h1>
+    <h1 id="head3">
+        Eos!
+    </h1>
+
 <script>
 
 </script>
