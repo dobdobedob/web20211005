@@ -9,17 +9,28 @@
     </style>
     <script>
         $(document).ready(function() {
-            $("#container").append("<h1>hello</h1>");
-            $("#container").append("<p>javascript</p>");
-
-            let newElem = $("<p>spring</p>");
-            $("#container").append(newElem);
+            $("#btn1").click(function () {
+                let randomNumber = Math.random();
+                $("#container").append(`<div>${randomNumber}</div>`);
+            })
+            $("#btn2").click(function () {
+                let randomNumber = Math.random();
+                $("#container").append(`<div>${randomNumber}</div>`);
+            })
         });
     </script>
 </head>
 <body>
+<!-- button{+} -->
+<button id="btn1">+</button>
 <!-- #container -->
 <div id="container"></div>
+
+<hr>
+
+<!-- button#btn{+}+#container2 -->
+<button id="btn">+</button>
+<div id="container2"></div>
 <script>
 
 </script>
